@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>서브웨이 꿀 조합</title>
+    <link rel="stylesheet" type="text/css" href="subway_comb.css">
+</head>
+<body>
+    <header>
+        <img src="image/unnamed.png" alt="title" class="title">
+    </header>
+    <section>
+        <form>
+            <fieldset>
+                <legend>당신의 조합을 저장하세요!</legend>
+                <table class="main_table">
+                    <tr>
+                        <td colspan="2" style="color: #008D22; height: 15px;">조합 불러오기</td>
+                    </tr>
+                    <tr><td colspan="2" style="color: #008D22; height: 15px;">
+                        <button type="button" id="makeNew">빈 조합 만들기</button>
+                            <select id="save"> 
+                                <option value="1">empty</option>
+                            </select>
+                            <button type="button" id="setNameButton">조합 이름 설정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 15px;">메뉴 </td>
+                        <td style="height: 15px;">
+                            <select name="Menu" id="menu"> 
+                                <option value="스파이시 바비큐">스파이시 바비큐</option>
+                                <option value="스파이시 이탈리안">스파이시 이탈리안</option>
+                                <option value="스파이시 쉬림프">스파이시 쉬림프</option>
+                                <option value="스테이크&치즈">스테이크&치즈</option>
+                                <option value="치킨 베이컨 아보카도">치킨 베이컨 아보카도</option>
+                                <option value="쉬림프">쉬림프</option>
+                                <option value="로스트 치킨">로스트 치킨</option>
+                                <option value="로티세르 바비큐 치킨">로티세르 바비큐 치킨</option>
+                                <option value="K-바비큐">K-바비큐</option>
+                                <option value="풀드 포크 바비큐">풀드 포크 바비큐</option>
+                                <option value="써브웨이 클럽">써브웨이 클럽</option>
+                                <option value="치킨데리야끼">치킨데리야끼</option>
+                                <option value="이탈리안 비엠티">이탈리안 비엠티</option>
+                                <option value="비엘티">비엘티</option>
+                                <option value="치킨 슬라이스">치킨 슬라이스</option>
+                                <option value="참치">참치</option>
+                                <option value="햄">햄</option>
+                                <option value="에그마요">에그마요</option>
+                                <option value="베지">베지</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="height: 15px;">
+                            <details>
+                                <summary>메뉴 사진</summary>
+                                    <table class="menu_img">
+                                        <tr>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/스파이시바비큐_정면_20221031041757452.png" alt="스파이시 바비큐" width="114" height="80">
+                                                    <figcaption>스파이시 바비큐</figcaption>
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/spicy_italian_20211231101030504.png" alt="스파이시 이탈리안" width="114" height="80">
+                                                    <figcaption>스파이시 이탈리안</figcaption>
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/Spicy_Shrimp_front_20230423101203803.png" alt="스파이시 쉬림프" width="114" height="80">
+                                                    <figcaption>스파이시 쉬림프</figcaption>
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/Steak-&-Cheese_20211231101048845.png" alt="스테이크&치즈" width="114" height="80">
+                                                    <figcaption>스테이크&치즈</figcaption>
+                                                </figure>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/치킨베이컨아보카도샌드위치_20220805110545679.png" alt="치킨 베이컨 아보카도" width="114" height="80">
+                                                    <figcaption>치킨 베이컨 아보카도</figcaption>
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/Shrimp_front_20230423101014206.png" alt="쉬림프" width="114" height="80">
+                                                    <figcaption>쉬림프</figcaption>
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/Roasted-Chicken_20211231100910048.png" alt="로스트 치킨" width="114" height="80">
+                                                    <figcaption>로스트 치킨</figcaption>
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/Rotisserie-Barbecue-Chicken_20211231100953722.png" alt="로티세르 바비큐 치킨" width="114" height="80">
+                                                    <figcaption>로티세르 바비큐 치킨</figcaption>
+                                                </figure>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/K-BBQ_20211231100807732.png" alt="K-바비큐" width="114" height="80">
+                                                    <figcaption>K-바비큐</figcaption>
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/Pulled-Pork+cheese_20211231100849537.png" alt="풀드 포크 바비큐" width="114" height="80">
+                                                    <figcaption>풀드 포크 바비큐</figcaption>
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/Subway-Club™_20211231101106013.png" alt="써브웨이 클럽" width="114" height="80">
+                                                    <figcaption>써브웨이 클럽</figcaption>
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/Chicken-Teriyaki_20211231100647377.png" alt="치킨데리야끼" width="114" height="80">
+                                                    <figcaption>치킨데리야끼</figcaption>
+                                                </figure>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/Italian_B.M.T_20211231100739791.png" alt="이탈리안 비엠티" width="114" height="80">
+                                                    <figcaption>이탈리안 비엠티</figcaption>
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/B.L.T_20211231100621720.png" alt="B.L.t" width="114" height="80">
+                                                    <figcaption>B.L.T</figcaption>
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/치킨슬라이스샌드위치_20220804060954319.png" alt="치킨 슬라이스" width="114" height="80">
+                                                    <figcaption>치킨 슬라이스</figcaption>
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/Tuna_20211231101122768.png" alt="참치" width="114" height="80">
+                                                    <figcaption>참치</figcaption>
+                                                </figure>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/Ham_20211231100718670.png" alt="햄" width="114" height="80">
+                                                    <figcaption>햄</figcaption>
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/Egg-Mayo_20211231100704258.png" alt="에그마요" width="114" height="80">
+                                                    <figcaption>에그마요</figcaption>
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                <figure>
+                                                    <img src="image/Veggie-Delite_20211231101212451.png" alt="베지" width="114" height="80">
+                                                    <figcaption>베지</figcaption>
+                                                </figure>
+                                            </td>
+                                        </tr>
+                                    </table>
+                            </details>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>길이</td>
+                        <td>
+                            <select name="Size" id="size">
+                                <option value="15">15cm</option>
+                                <option value="30">30cm</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>빵 </td>
+                        <td>
+                            <select name="Bread" id="bread">
+                                <option value="화이트">화이트</option>
+                                <option value="파마산 오레가노">파마산 오레가노</option>
+                                <option value="위트">위트</option>
+                                <option value="허니오트">허니오트</option>
+                                <option value="히티">히티</option>
+                                <option value="플랫브레드">플랫브레드</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>토스팅 </td>
+                        <td>
+                            <select name="Toasting" id="toasting">
+                                <option value="Yes">토스팅</option>
+                                <option value="No">토스팅 안 함</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>치즈 </td>
+                        <td>
+                            <select name="Cheese" id="cheese">
+                                <option value="아메리칸 치즈">아메리칸 치즈</option>
+                                <option value="슈레드 치즈">슈레드 치즈</option>
+                                <option value="모짜렐라 치즈">모짜렐라 치즈</option>
+                                <option value="None">치즈 제외</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>치즈 추가</td>
+                        <td>
+                            <select name="Ex_Cheese" id="ex_cheese">
+                                <option value="None">추가 안함</option>
+                                <option value="아메리칸 치즈">아메리칸 치즈 (+1400)</option>
+                                <option value="슈레드 치즈">슈레드 치즈 (+1400)</option>
+                                <option value="모짜렐라 치즈">모짜렐라 치즈 (+1400)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>야채</td>
+                        <td>
+                            <details>
+                                <summary>펼치기</summary>
+                                <p>
+                                    <label><input type="checkbox" id="0">양상추</label>
+                                    <label><input type="checkbox" id="1">토마토</label>
+                                    <label><input type="checkbox" id="2">오이</label>
+                                    <label><input type="checkbox" id="3">피망</label>
+                                    <label><input type="checkbox" id="4">양파</label>
+                                    <label><input type="checkbox" id="5">피클</label>
+                                    <label><input type="checkbox" id="6">올리브</label>
+                                    <label><input type="checkbox" id="7">할라피뇨</label>                                    
+                                </p>
+                            </details>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>소스 </td>
+                        <td>
+                            <details>
+                                <summary>3가지 선택 가능</summary>
+                                <p>
+                                    <label><input type="checkbox" id="8">랜치</label>
+                                    <label><input type="checkbox" id="9">스위트 어니언</label>
+                                    <label><input type="checkbox" id="10">마요네즈</label>
+                                    <label><input type="checkbox" id="11">스위트 칠리</label>
+                                    <label><input type="checkbox" id="12">스모크 바베큐</label> <br>
+                                    <label><input type="checkbox" id="13">핫 칠리</label>
+                                    <label><input type="checkbox" id="14">허니 머스타드</label>
+                                    <label><input type="checkbox" id="15">올리브 오일</label>  
+                                    <label><input type="checkbox" id="16">레드 와인 식초</label>
+                                    <label><input type="checkbox" id="17">소금</label>
+                                    <label><input type="checkbox" id="18">후추</label>                                  
+                                </p>
+                            </details>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>추가 선택 </td>
+                        <td>
+                            <details>
+                                <summary>펼치기</summary>
+                                <p>
+                                    <label><input type="checkbox" id="19">에그마요 (+2000원)</label>
+                                    <label><input type="checkbox" id="20">페퍼로니 (+1400원)</label>
+                                    <label><input type="checkbox" id="21">베이컨 (+1500원)</label><br>
+                                    <label><input type="checkbox" id="22">아보카도 (+1500원)</label>
+                                    <label><input type="checkbox" id="23">오믈렛 (+1800원)</label>                              
+                                </p>
+                            </details>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>미트 추가 </td>
+                        <td>
+                            <select name="Meat" id="meat"> 
+                                <option value="None">추가 안함</option>
+                                <option value="참치">참치</option>
+                                <option value="햄">햄</option>
+                                <option value="비엘티">비엘티</option>
+                                <option value="비엠티">비엠티</option>
+                                <option value="스파이시 이탈리안">스파이시 이탈리안</option>
+                                <option value="치킨데리야끼">치킨데리야끼</option>
+                                <option value="클럽(치킨)">클럽(치킨)</option>
+                                <option value="풀드 포크">풀드 포크</option>
+                                <option value="스파이시 쉬림프">스파이시 쉬림프</option>
+                                <option value="치킨슬라이스">치킨슬라이스</option>
+                                <option value="스파이시바비큐">스파이시바비큐</option>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"   style="color: #008D22; height: 15px;">
+                            <button type="submit" id="saveButton">저장하기</button>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        <div style="text-align: center;"><a href="https://www.subway.co.kr/" target="_blank">주문하러 가기!</a></div>
+    </footer>
+    <script src="subway_comb.js"></script>
+</body>
+</html>
