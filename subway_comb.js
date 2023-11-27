@@ -10,7 +10,10 @@ var defaultCombinations = {
         cheese: "슈레드 치즈",
         ex_cheese: "None",
         meat: "None",
-        checkboxes: { "8": true, "9": true, "13": true }
+        checkboxes: {
+            "양상추": true, "토마토": true, "오이": true, "피망": true, "양파": true, "피클": true, "올리브": true, "할라피뇨": true, 
+            "랜치": true, "스위트 어니언": true, "핫 칠리": true
+        }
     },
     "BMT 2" : {
         menu: "이탈리안 비엠티",
@@ -20,7 +23,10 @@ var defaultCombinations = {
         cheese: "아메리칸 치즈",
         ex_cheese: "None",
         meat: "None",
-        checkboxes: { "8": true, "13": true }
+        checkboxes: { 
+            "양상추": true, "토마토": true, "오이": true, "피망": true, "양파": true, "피클": true, "올리브": true, "할라피뇨": true,    
+            "랜치": true, "핫 칠리": true
+        }
     },
     "에그마요 1" : {
         menu: "에그마요",
@@ -30,7 +36,10 @@ var defaultCombinations = {
         cheese: "아메리칸 치즈",
         ex_cheese: "None",
         meat: "None",
-        checkboxes: { "8": true, "13": true, "21": true }
+        checkboxes: {
+            "양상추": true, "토마토": true, "오이": true, "피망": true, "양파": true, "피클": true, "올리브": true, "할라피뇨": true,
+            "랜치": true, "핫 칠리": true, "베이컨": true
+        }
     }
     // 여기에 더 많은 미리 정의된 조합들을 추가할 수 있습니다
 };
