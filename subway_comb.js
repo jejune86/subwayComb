@@ -12,7 +12,7 @@ var defaultCombinations = {
         meat: "None",
         checkboxes: {
             "양상추": true, "토마토": true, "오이": true, "피망": true, "양파": true, "피클": true, "올리브": true, "할라피뇨": true, 
-            "랜치": true, "스위트 어니언": true, "핫 칠리": true
+            "랜치": true, "스위트_어니언": true, "핫 칠리": true
         }
     },
     "BMT 2" : {
@@ -25,7 +25,7 @@ var defaultCombinations = {
         meat: "None",
         checkboxes: { 
             "양상추": true, "토마토": true, "오이": true, "피망": true, "양파": true, "피클": true, "올리브": true, "할라피뇨": true,    
-            "랜치": true, "핫 칠리": true
+            "랜치": true, "핫_칠리": true
         }
     },
     "에그마요 1" : {
@@ -38,7 +38,7 @@ var defaultCombinations = {
         meat: "None",
         checkboxes: {
             "양상추": true, "토마토": true, "오이": true, "피망": true, "양파": true, "피클": true, "올리브": true, "할라피뇨": true,
-            "랜치": true, "핫 칠리": true, "베이컨": true
+            "랜치": true, "핫_칠리": true, "베이컨": true
         }
     },
     "서브웨이 클럽 2" : {
@@ -51,7 +51,7 @@ var defaultCombinations = {
         meat: "None",
         checkboxes: { 
             "양상추": true, "토마토": true, "피망": true, "양파": true, "올리브": true, "할라피뇨": true,    
-            "스위트 어니언": true, "스위트 칠리": true,
+            "스위트_어니언": true, "스위트_칠리": true,
             "아보카도" : true
         }
     },
@@ -123,14 +123,14 @@ document.getElementById('makeNew').addEventListener('click', function() {
             "올리브": false,
             "할라피뇨": false,
             "랜치": false,
-            "스위트 어니언": false,
+            "스위트_어니언": false,
             "마요네즈": false,
-            "스위트 칠리": false,
-            "스모크 바베큐": false,
-            "핫 칠리": false,
-            "허니 머스타드": false,
-            "올리브 오일": false,
-            "레드 와인 식초": false,
+            "스위트_칠리": false,
+            "스모크_바베큐": false,
+            "핫_칠리": false,
+            "허니_머스타드": false,
+            "올리브_오일": false,
+            "레드_와인_식초": false,
             "소금": false,
             "후추": false,
             "에그마요": false,
@@ -157,7 +157,7 @@ document.getElementById('makeNew').addEventListener('click', function() {
 function saveCombination() {
     // 소스 체크박스 확인
     var selectedSourcesCount = 0;
-    var sauceCheckboxes = ["랜치", "스위트 어니언", "마요네즈", "스위트 칠리", "스모크 바베큐", "핫 칠리", "허니 머스타드", "올리브 오일", "레드 와인 식초", "소금", "후추"]; // 체크박스 ID를 나타내는 배열
+    var sauceCheckboxes = ["랜치", "스위트_어니언", "마요네즈", "스위트_칠리", "스모크_바베큐", "핫_칠리", "허니_머스타드", "올리브_오일", "레드_와인_식초", "소금", "후추"]; // 체크박스 ID를 나타내는 배열
 
     sauceCheckboxes.forEach(function(id) {
         if (document.getElementById(id) && document.getElementById(id).checked) {
