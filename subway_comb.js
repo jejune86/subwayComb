@@ -40,7 +40,21 @@ var defaultCombinations = {
             "양상추": true, "토마토": true, "오이": true, "피망": true, "양파": true, "피클": true, "올리브": true, "할라피뇨": true,
             "랜치": true, "핫 칠리": true, "베이컨": true
         }
-    }
+    },
+    "서브웨이 클럽 2" : {
+        menu: "서브웨이 클럽",
+        size: "15",
+        bread: "위트",
+        toasting: "Yes",
+        cheese: "슈레드 치즈",
+        ex_cheese: "None",
+        meat: "None",
+        checkboxes: { 
+            "양상추": true, "토마토": true, "피망": true, "양파": true, "올리브": true, "할라피뇨": true,    
+            "스위트 어니언": true, "스위트 칠리": true,
+            "아보카도" : true
+        }
+    },
     // 여기에 더 많은 미리 정의된 조합들을 추가할 수 있습니다
 };
 
@@ -123,7 +137,8 @@ document.getElementById('makeNew').addEventListener('click', function() {
             "페퍼로니": false,
             "베이컨": false,
             "아보카도": false,
-            "오믈렛": false    
+            "오믈렛": false
+            
         }
     };
 
@@ -142,17 +157,19 @@ document.getElementById('makeNew').addEventListener('click', function() {
 function saveCombination() {
     // 소스 체크박스 확인
     var selectedSourcesCount = 0;
-    for (var i = 8; i <= 18; i++) {
-        if (document.getElementById(i) && document.getElementById(i).checked) {
+    var sauceCheckboxes = ["렌치", "스위트 어니언", "마요네즈", "스위트 칠리", "스모크 바베큐", "핫 칠리", "허니 머스타드", "올리브 오일", "레드 와인 식초", "소금", "후추"]; // 체크박스 ID를 나타내는 배열
+
+    sauceCheckboxes.forEach(function(id) {
+        if (document.getElementById(id) && document.getElementById(id).checked) {
             selectedSourcesCount++;
         }
-    }
+    });
 
     // 선택된 소스 체크박스가 3개를 초과하는 경우
     if (selectedSourcesCount > 3) {
         alert("소스는 최대 3개까지만 선택할 수 있습니다. 다시 선택해주세요.");
         return; // 저장 중지
-    } 
+    }
 
     var combination = {
         menu: document.getElementById('menu').value,
