@@ -122,7 +122,7 @@ document.getElementById('makeNew').addEventListener('click', function() {
             "피클": false,
             "올리브": false,
             "할라피뇨": false,
-            "렌치": false,
+            "랜치": false,
             "스위트 어니언": false,
             "마요네즈": false,
             "스위트 칠리": false,
@@ -157,7 +157,7 @@ document.getElementById('makeNew').addEventListener('click', function() {
 function saveCombination() {
     // 소스 체크박스 확인
     var selectedSourcesCount = 0;
-    var sauceCheckboxes = ["렌치", "스위트 어니언", "마요네즈", "스위트 칠리", "스모크 바베큐", "핫 칠리", "허니 머스타드", "올리브 오일", "레드 와인 식초", "소금", "후추"]; // 체크박스 ID를 나타내는 배열
+    var sauceCheckboxes = ["랜치", "스위트 어니언", "마요네즈", "스위트 칠리", "스모크 바베큐", "핫 칠리", "허니 머스타드", "올리브 오일", "레드 와인 식초", "소금", "후추"]; // 체크박스 ID를 나타내는 배열
 
     sauceCheckboxes.forEach(function(id) {
         if (document.getElementById(id) && document.getElementById(id).checked) {
