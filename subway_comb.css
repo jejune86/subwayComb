@@ -1,52 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700&display=swap');
+body {
+    font-family: 'Gothic A1', sans-serif;
+}
+header {
+    justify-content: center;
+    width : 760px; /* 950px의 80% */
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px; /* 30px의 80% */
+    font-weight: 1000;
+}
 img {
     display:block;
     margin: 0 auto;
-    width: 144px;
-    height: 100px;
+    width: 112px; /* 140px의 80% */
+    height: 80px; /* 100px의 80% */
 }
 img.title{
-    width: 50px;
-    height: 50px;
-    display: block;
+    width: 40px; /* 50px의 80% */
+    height: 40px; /* 50px의 80% */
+}
+div.headfootDiv {
+    width : 760px; /* 950px의 80% */
+    margin: 0 auto;
+    text-align: center;
+}
+div.layout {
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    align-items: start; /* 상단 정렬 */
+    margin: 0 auto;
+    width: 80%; /* 전체 컨테이너의 폭 */
+}
+aside {
+    background-color: #009223;
+    width : 350px;
+    height : 600px;
+    border : 4px solid #FFC300;
+    border-radius: 16px;
+    margin-top: 10px;
+}
+
+#sauceAside {
+    color : white;
+    font-size : 12px;
+    font-weight: bold;
+}
+
+#sauceAside table td{
+    padding : 5px;
 }
 fieldset {
-    border : 4px solid #008D22;
-    border-radius: 30px;
-    color : #F1B71C;
+    position : relative;
+    border : 4px solid #009223;
+    border-radius: 24px; /* 30px의 80% */
+    color : #FFC300;
     font-weight: bold;
-    width : 1000px;
-    height : 680px;
-    margin: 0 auto;
+    width : 760px; /* 950px의 80% */
+    height : 600px; /* 680px의 80% */
+    margin : 0px 20px;
     overflow: auto;
 }
 table.main_table {
-    width: 950px;
-    margin-left: 25px;
+    width: 640px; /* 800px의 80% */
+    font-size: 16px; /* 20px의 80% */
+    font-weight: 1000;
+    margin-left: 60px; /* 75px의 80% */
 }
 table.main_table td {
-    width: 100px;
-    height: 50px;
+    width: 80px; /* 100px의 80% */
+    height: 40px; /* 50px의 80% */
     text-align: center;
 }
-
-
+#sub {
+    margin-left: 80px; /* 100px의 80% */
+}
+table.menu_img {
+    width: auto; 
+    margin-left : 40px; /* 50px의 80% */
+}
 figure {
-    border : 3px solid #008D22;
-    border-radius: 20px;
+    cursor:pointer;
+    background-color: #FFC300;
+    border : 3px solid #009223;
+    border-radius: 16px; /* 20px의 80% */
+    margin : 4px; /* 5px의 80% */
+}
+figure:hover {
+    background-color: #DDA204;
 }
 figcaption {
-    font-size: 13px;
-    text-align : center
+    color: white;
+    font-size: 11.5px; /* 13px의 80% */
+    font-weight: bold;
+    text-align : center;
 }
 select {
-    border : 3px solid #008D22;
-    border-radius: 30px;
-    color: #F1B71C;
+    border : 3px solid #009223;
+    border-radius: 24px; /* 30px의 80% */
+    color: #FFC300;
+    font-family: 'Gothic A1', sans-serif;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 12px; /* 15px의 80% */
     text-align: center;
-    width: 150px;
-    height: 40px;
+    width: 120px; /* 150px의 80% */
+    height: 32px; /* 40px의 80% */
     cursor: pointer;
 }
 select:focus, select:hover {
@@ -57,7 +115,7 @@ legend {
     color: black;
 }
 summary {
-    color : #008D22;
+    color : #009223;
     font-size: smaller;
     cursor: pointer;
 }
@@ -65,12 +123,15 @@ label {
     font-size: smaller;
 }
 button {
-    border : 2px solid #008D22;
-    border-radius: 30px;
-    background-color: #F1B71C;
+    border : 2px solid #009223;
+    border-radius: 24px; /* 30px의 80% */
+    background-color: #FFC300;
     color : white;
+    font-family: 'Gothic A1', sans-serif;
     font-weight: bold;
     cursor: pointer;
+    font-size: 12px; /* 15px의 80% */
+    padding: 4px 8px; /* 예시: 기존 padding 값을 80%로 조정 */
 }
 button:hover {
     background-color: #DDA204; /* 원하는 색상으로 설정 */
@@ -82,4 +143,26 @@ label {
 
 input[type="checkbox"] {
     cursor:pointer;
+}
+input[type="checkbox"]:checked {
+    accent-color: #009223; /* 체크박스의 색상을 변경 */
+}
+#menuAside {
+    position: relative;
+
+    font-weight: bold;
+    color :#FFC300
+}
+#menuAside button {
+    position: absolute; /* 절대 위치 사용 */
+    top: 0; /* 상단에서 0px */
+    right: 0; /* 우측에서 0px */   
+}
+
+#asideImage {
+    width: 144px;
+    height: 100px;
+    background-color: white;
+    border : 4px solid #FFC300;
+    border-radius: 16px;
 }
