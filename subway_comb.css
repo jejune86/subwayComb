@@ -4,35 +4,38 @@ body {
 }
 header {
     justify-content: center;
-    width : 760px; /* 950px의 80% */
+    width : 760px; 
     margin: 0 auto;
     text-align: center;
-    font-size: 24px; /* 30px의 80% */
+    font-size: 24px; 
     font-weight: 1000;
 }
 img {
     display:block;
     margin: 0 auto;
-    width: 112px; /* 140px의 80% */
-    height: 80px; /* 100px의 80% */
+    width: 112px; 
+    height: 80px;
 }
 img.title{
-    width: 40px; /* 50px의 80% */
-    height: 40px; /* 50px의 80% */
+    width: 40px;
+    height: 40px;
 }
 div.headfootDiv {
-    width : 760px; /* 950px의 80% */
+    width : 760px; 
     margin: 0 auto;
     text-align: center;
 }
 div.layout {
     display: flex;
-    justify-content: center; /* 가운데 정렬 */
-    align-items: start; /* 상단 정렬 */
+    justify-content: center;
+    align-items: start;
     margin: 0 auto;
-    width: 80%; /* 전체 컨테이너의 폭 */
+    width: 80%; 
 }
 aside {
+    visibility: hidden;
+    opacity : 0;
+    transition: visibility 0s linear 0.3s, opacity 0.3s linear;
     background-color: #009223;
     width : 350px;
     height : 600px;
@@ -40,11 +43,16 @@ aside {
     border-radius: 16px;
     margin-top: 10px;
 }
-
+aside.show {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s 0s, opacity 0.5s linear
+}
 #sauceAside {
     color : white;
     font-size : 12px;
     font-weight: bold;
+    overflow: auto;
 }
 
 #sauceAside table td{
@@ -53,58 +61,58 @@ aside {
 fieldset {
     position : relative;
     border : 4px solid #009223;
-    border-radius: 24px; /* 30px의 80% */
+    border-radius: 24px; 
     color : #FFC300;
     font-weight: bold;
-    width : 760px; /* 950px의 80% */
-    height : 600px; /* 680px의 80% */
+    width : 760px;
+    height : 600px; 
     margin : 0px 20px;
     overflow: auto;
 }
 table.main_table {
-    width: 640px; /* 800px의 80% */
-    font-size: 16px; /* 20px의 80% */
+    width: 640px; 
+    font-size: 16px; 
     font-weight: 1000;
-    margin-left: 60px; /* 75px의 80% */
+    margin-left: 60px; 
 }
 table.main_table td {
-    width: 80px; /* 100px의 80% */
-    height: 40px; /* 50px의 80% */
+    width: 80px; 
+    height: 40px;
     text-align: center;
 }
 #sub {
-    margin-left: 80px; /* 100px의 80% */
+    margin-left: 80px;
 }
 table.menu_img {
     width: auto; 
-    margin-left : 40px; /* 50px의 80% */
+    margin-left : 40px; 
 }
 figure {
     cursor:pointer;
     background-color: #FFC300;
     border : 3px solid #009223;
-    border-radius: 16px; /* 20px의 80% */
-    margin : 4px; /* 5px의 80% */
+    border-radius: 16px; 
+    margin : 4px; 
 }
 figure:hover {
     background-color: #DDA204;
 }
 figcaption {
     color: white;
-    font-size: 11.5px; /* 13px의 80% */
+    font-size: 11.5px; 
     font-weight: bold;
     text-align : center;
 }
 select {
     border : 3px solid #009223;
-    border-radius: 24px; /* 30px의 80% */
+    border-radius: 24px; 
     color: #FFC300;
     font-family: 'Gothic A1', sans-serif;
     font-weight: bold;
-    font-size: 12px; /* 15px의 80% */
+    font-size: 12px; 
     text-align: center;
-    width: 120px; /* 150px의 80% */
-    height: 32px; /* 40px의 80% */
+    width: 120px; 
+    height: 32px; 
     cursor: pointer;
 }
 select:focus, select:hover {
@@ -124,17 +132,17 @@ label {
 }
 button {
     border : 2px solid #009223;
-    border-radius: 24px; /* 30px의 80% */
+    border-radius: 24px;
     background-color: #FFC300;
     color : white;
     font-family: 'Gothic A1', sans-serif;
     font-weight: bold;
     cursor: pointer;
-    font-size: 12px; /* 15px의 80% */
-    padding: 4px 8px; /* 예시: 기존 padding 값을 80%로 조정 */
+    font-size: 12px;
+    padding: 4px 8px; 
 }
 button:hover {
-    background-color: #DDA204; /* 원하는 색상으로 설정 */
+    background-color: #DDA204;
 }
 
 label {
@@ -145,7 +153,7 @@ input[type="checkbox"] {
     cursor:pointer;
 }
 input[type="checkbox"]:checked {
-    accent-color: #009223; /* 체크박스의 색상을 변경 */
+    accent-color: #009223; 
 }
 #menuAside {
     position: relative;
@@ -154,9 +162,9 @@ input[type="checkbox"]:checked {
     color :#FFC300
 }
 #menuAside button {
-    position: absolute; /* 절대 위치 사용 */
-    top: 0; /* 상단에서 0px */
-    right: 0; /* 우측에서 0px */   
+    position: absolute;
+    top: 0; 
+    right: 0;
 }
 
 #asideImage {

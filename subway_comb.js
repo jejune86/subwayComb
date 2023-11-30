@@ -499,24 +499,25 @@ function showImage(figureId) {
     asideImage.alt = image.alt;
     asideText.textContent = caption.textContent;
     additionalTextElement.innerHTML = text.replace(/\n/g, '<br>');
-    imageAside.style.display = 'block';
+    imageAside.classList.add('show');
 }
 
 function showSauce() {
-
     var sauceAside = document.getElementById('sauceAside');
-
-    if(sauceAside.style.display=='block') 
-        document.getElementById('sauceAside').style.display = 'none'; 
-    else 
-        sauceAside.style.display = 'block';
+    if(sauceAside.classList.contains('show')) {
+        sauceAside.classList.remove('show');
+    } else {
+        sauceAside.classList.add('show');
+    }
 }
 
 function closeMenuAside() {
-    document.getElementById('menuAside').style.display = 'none'; // aside를 숨깁니다.
+    var menuAside = document.getElementById('menuAside');
+    menuAside.classList.remove('show'); // 'show' 클래스를 제거합니다.
 }
 function closeSauceAside() {
-    document.getElementById('sauceAside').style.display = 'none'; // aside를 숨깁니다.
+    var sauceAside = document.getElementById('sauceAside');
+    sauceAside.classList.remove('show');
 }
 
 document.getElementById('setNameButton').addEventListener('click', setCombinationName);
