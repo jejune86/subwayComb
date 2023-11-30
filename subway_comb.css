@@ -4,8 +4,6 @@ body {
 }
 header {
     justify-content: center;
-    width : 760px; 
-    margin: 0 auto;
     text-align: center;
     font-size: 24px; 
     font-weight: 1000;
@@ -22,7 +20,7 @@ img.title{
 }
 
 div.headfootDiv {
-    width : 760px; 
+    width: 80%; /* Adjust the width as needed */
     margin: 0 auto;
     text-align: center;
 }
@@ -32,6 +30,7 @@ div.layout {
     align-items: start;
     margin: 0 auto;
     width: 80%; 
+    align-items: flex-start;
 }
 aside {
     visibility: hidden;
@@ -39,6 +38,7 @@ aside {
     transition: visibility 0s linear 0.3s, opacity 0.3s linear;
     background-color: #009223;
     width : 350px;
+    min-width: 300px;
     height : 600px;
     border : 4px solid #FFC300;
     border-radius: 16px;
@@ -59,13 +59,15 @@ aside.show {
 #sauceAside table td{
     padding : 5px;
 }
-fieldset {
+
+fieldset { /* Adjust the width as needed */
     position : relative;
     border : 4px solid #009223;
     border-radius: 24px; 
     color : #FFC300;
     font-weight: bold;
-    width : 760px;
+    width : 720px;
+    min-width: 720px;
     height : 600px; 
     margin : 0px 20px;
     overflow: auto;
@@ -74,15 +76,15 @@ table.main_table {
     width: 640px; 
     font-size: 16px; 
     font-weight: 1000;
-    margin-left: 60px; 
+    margin-left: 40px;
+}
+#sub{
+    margin-left : 60px
 }
 table.main_table td {
     width: 80px; 
     height: 40px;
     text-align: center;
-}
-#sub {
-    margin-left: 80px;
 }
 table.menu_img {
     width: auto; 
